@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -13,6 +12,11 @@
     --text-primary: #ffffff;
     --text-secondary: #b0bec5;
     --border-color: #2d2d2d;
+    
+    /* Dedicated Font Configurations */
+    --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --heading-font: 'Copperplate', 'Papyrus', 'Impact', fantasy;
+    --cursive-font: 'Georgia', 'Apple Chancery', 'Brush Script MT', cursive;
 }
 
 body {
@@ -24,6 +28,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: var(--body-font);
 }
 
 /* Navbar Layout */
@@ -41,22 +46,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Align links smoothly across the right axis */
     align-items: center;
     padding: 0 1.5rem;
     height: 100%;
-}
-
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    text-decoration: none;
-    color: var(--text-primary);
-    letter-spacing: 1px;
-}
-
-.logo span {
-    color: var(--accent-color);
 }
 
 .nav-links {
@@ -72,6 +65,7 @@ body {
     font-weight: 500;
     transition: color 0.2s ease;
     cursor: pointer;
+    font-family: var(--body-font);
 }
 
 .nav-item:hover, .nav-item.active {
@@ -121,24 +115,42 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Headings: Cursive Rules */
 h2 {
-    font-size: 1.8rem;
+    font-family: var(--cursive-font);
+    font-size: 2.2rem;
+    font-weight: normal;
+    font-style: italic;
     margin-bottom: 1.8rem;
     border-left: 4px solid var(--accent-color);
     padding-left: 0.75rem;
+    color: var(--text-primary);
 }
 
-/* Hero Elements */
-.hero-content h1 {
-    font-size: 2.8rem;
+/* Primary Profile Identity Name: Fantasy Rules */
+.hero-content h1.fantasy-heading {
+    font-family: var(--heading-font);
+    font-size: 3.8rem;
     margin-bottom: 0.5rem;
-    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+/* Sub-card Section Headings: Cursive Layout Rules */
+.skill-card h3, .project-card h3, .service-card h3, .timeline-item h3, .cert-card h3, .experience-box h3 {
+    font-family: var(--cursive-font);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
 }
 
 .subtitle {
     font-size: 1.2rem;
-    color: var(--accent-color);
+    color: var(--text-secondary);
     margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .tagline {
@@ -180,6 +192,12 @@ h2 {
     transform: translateY(-1px);
 }
 
+/* Layout Content Text Elements */
+p, span, li {
+    font-family: var(--body-font);
+    color: var(--text-secondary);
+}
+
 /* Grid Layout Elements */
 .about-grid {
     display: grid;
@@ -194,7 +212,6 @@ h2 {
 }
 
 .about-text p {
-    color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -221,7 +238,6 @@ h2 {
 }
 
 .institution {
-    color: var(--text-secondary);
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
@@ -247,7 +263,7 @@ h2 {
 
 .project-meta {
     font-size: 0.85rem;
-    color: var(--accent-color);
+    color: var(--text-secondary);
     margin: 0.5rem 0 1rem 0;
 }
 
@@ -288,6 +304,7 @@ h2 {
 .contact-method a {
     color: var(--text-primary);
     text-decoration: none;
+    font-family: var(--body-font);
 }
 
 .footer {
@@ -296,13 +313,16 @@ h2 {
     padding: 1.5rem;
     border-top: 1px solid var(--border-color);
     font-size: 0.85rem;
-    color: var(--text-secondary);
 }
 
 /* Responsive UI Engine */
 @media (max-width: 868px) {
     .menu-toggle {
         display: flex;
+    }
+
+    .nav-container {
+        justify-content: flex-end;
     }
 
     .nav-links {
@@ -350,8 +370,8 @@ h2 {
         grid-template-columns: 1fr;
     }
 
-    .hero-content h1 {
-        font-size: 2.2rem;
+    .hero-content h1.fantasy-heading {
+        font-size: 2.4rem;
     }
     
     .cta-buttons {
