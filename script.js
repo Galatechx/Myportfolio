@@ -1,24 +1,30 @@
 /**
- * Tab/Page Routing Management Engine
- * Handles explicit target views while removing any artificial overhead.
+ * View Router and Mobile Interface Controller
  */
+
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const navMenu = document.getElementById('nav-menu');
+
+// Mobile Menu Event Handler
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
+
 function switchPage(targetPageId) {
-    // Collect all valid page segments
     const pages = document.querySelectorAll('.page-view');
     const navItems = document.querySelectorAll('.nav-item');
     
-    let targetExists = false;
-
     pages.forEach(page => {
         if (page.id === targetPageId) {
             page.classList.add('active');
-            targetExists = true;
         } else {
             page.classList.remove('active');
         }
     });
 
-    // Sync active state visually inside global navigation links
     navItems.forEach(item => {
         const itemHref = item.getAttribute('href').replace('#', '');
         if (itemHref === targetPageId) {
@@ -28,11 +34,16 @@ function switchPage(targetPageId) {
         }
     });
 
-    // Reset view position cleanly to prevent horizontal scrolling artifacting
+    // Close mobile side menu if navigation link selection occurs
+    if (mobileMenuBtn && mobileMenuBtn.classList.contains('active')) {
+        mobileMenuBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+
     window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-// Intercept window location parameters directly to permit direct file hyperlinking
+// Deep linking router mapping initialization
 window.addEventListener('DOMContentLoaded', () => {
     const currentHash = window.location.hash.replace('#', '');
     if (currentHash) {
@@ -42,11 +53,9 @@ window.addEventListener('DOMContentLoaded', () => {
             return;
         }
     }
-    // Fallback assignment to root view
     switchPage('home');
 });
 
-// Update runtime view tracking on popstate changes 
 window.addEventListener('hashchange', () => {
     const activeHash = window.location.hash.replace('#', '');
     if (activeHash) {
