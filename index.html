@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Musa Gala | Software Engineering Portfolio</title>
+    <title>Muhammad Musa Gala | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Navigation Header -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo" onclick="switchPage('home')">MMG<span>.</span></a>
-            <ul class="nav-links">
+            
+            <!-- Professional 3-Slash Hamburger Menu Trigger -->
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links System (10 Sections) -->
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#home" class="nav-item active" onclick="switchPage('home')">Home</a></li>
                 <li><a href="#about" class="nav-item" onclick="switchPage('about')">About</a></li>
                 <li><a href="#education" class="nav-item" onclick="switchPage('education')">Education</a></li>
@@ -27,40 +37,44 @@
         </div>
     </nav>
 
+    <!-- Main Section Handler for all 10 Views -->
     <main class="content-wrapper">
 
+        <!-- PAGE 1: HOME -->
         <section id="home" class="page-view active">
             <div class="hero-content">
                 <h1>Muhammad Musa Gala</h1>
                 <p class="subtitle">Software Engineering Student & Frontend Developer</p>
                 <p class="tagline">Building clean, functional, and production-ready web applications from the ground up.</p>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn primary" onclick="switchPage('projects')">View My Work</a>
+                    <a href="https://muhammadgala.netlify.app/" class="btn primary">View My Work</a>
                     <a href="#contact" class="btn secondary" onclick="switchPage('contact')">Get In Touch</a>
                 </div>
             </div>
         </section>
 
+        <!-- PAGE 2: ABOUT -->
         <section id="about" class="page-view">
             <div class="about-grid">
                 <div class="about-img-container">
-                    <img src="mmgabout.img" alt="Muhammad Musa Gala" onerror="this.src='https://via.placeholder.com/400x500?text=mmgabout.img+Missing'">
+                    <img src="mmgabout.jpg" alt="Muhammad Musa Gala">
                 </div>
                 <div class="about-text">
                     <h2>About Me</h2>
-                    <p>I am a 200-level Software Engineering student at Northwest University, Kano (Yusuf Maitama Sule University). My journey into software development is driven by a practical mindset: writing logical, maintainable code to solve real-world problems.</p>
+                    <p>I am a 200-level Software Engineering student at Northwest University, Kano. My journey into software development is driven by a practical mindset: writing logical, maintainable code to solve real-world problems.</p>
                     <p>Unlike standard academic paths that rely purely on theory, I actively complement my university education with rigorous independent study. I focus heavily on core web technologies and modern runtime environments, ensuring that everything I build is optimized, responsive, and structurally sound.</p>
                 </div>
             </div>
         </section>
 
+        <!-- PAGE 3: EDUCATION -->
         <section id="education" class="page-view">
             <h2>Educational Timeline</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="date">Current (Level 200)</span>
                     <h3>B.Sc. Software Engineering</h3>
-                    <p class="institution">Northwest University, Kano (YUMSUK)</p>
+                    <p class="institution">Northwest University, Kano</p>
                     <p>Focused on core computer science fundamentals, data structures, algorithms, and software architecture principles applied to modern systems.</p>
                 </div>
                 <div class="timeline-item">
@@ -72,6 +86,7 @@
             </div>
         </section>
 
+        <!-- PAGE 4: SKILLS -->
         <section id="skills" class="page-view">
             <h2>Technical Proficiencies</h2>
             <div class="skills-grid">
@@ -93,11 +108,12 @@
                 <div class="skill-card">
                     <i class="fab fa-node-js"></i>
                     <h3>Node.js</h3>
-                    <p>Understanding of server-side Javascript, environment configurations, and dependency package tracking via NPM.</p>
+                    <p>Understanding of server-side JavaScript, environment configurations, and dependency package tracking via NPM.</p>
                 </div>
             </div>
         </section>
 
+        <!-- PAGE 5: PROJECTS -->
         <section id="projects" class="page-view">
             <h2>Projects</h2>
             <div class="projects-grid">
@@ -106,15 +122,12 @@
                         <h3>Developer Portfolio v1.0</h3>
                         <p class="project-meta">Built with: Vanilla HTML, CSS, JavaScript</p>
                         <p>My first official professional deployment. A 10-page tabbed architectural portfolio created completely from scratch without external frameworks, featuring modular CSS layouts and customized JavaScript routing mechanisms.</p>
-                        <div class="project-links">
-                            <a href="#" class="proj-link"><i class="fab fa-github"></i> Repository</a>
-                            <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
                     </div>
                 </div>
-                </div>
+            </div>
         </section>
 
+        <!-- PAGE 6: CERTIFICATIONS -->
         <section id="certifications" class="page-view">
             <h2>Professional Certifications</h2>
             <div class="cert-container">
@@ -122,7 +135,7 @@
                     <h3>Responsive Web Design Certificate</h3>
                     <p class="issuer">Issued by freeCodeCamp</p>
                     <div class="cert-image">
-                        <img src="mmgcert.img" alt="freeCodeCamp Responsive Web Design Certificate" onerror="this.src='https://via.placeholder.com/600x400?text=mmgcert.img+Missing'">
+                        <img src="mmgcert.jpg" alt="freeCodeCamp Responsive Web Design Certificate">
                     </div>
                     <a href="https://www.freecodecamp.org/certification/muhammad-musa-gala/responsive-web-design" target="_blank" class="btn primary cert-btn">
                         Verify Official Credential <i class="fas fa-external-link-alt"></i>
@@ -131,6 +144,7 @@
             </div>
         </section>
 
+        <!-- PAGE 7: EXPERIENCE -->
         <section id="experience" class="page-view">
             <h2>Experience</h2>
             <div class="experience-box">
@@ -147,17 +161,18 @@
             </div>
         </section>
 
+        <!-- PAGE 8: TOOLS & PLATFORMS -->
         <section id="tools" class="page-view">
             <h2>Ecosystem & Deployment Tools</h2>
             <div class="tools-grid">
                 <div class="tool-item"><i class="fab fa-github"></i> <span>GitHub</span></div>
-                <div class="tool-item"><i class="si si-vercel"></i> <span>Vercel</span></div>
-                <div class="tool-item"><i class="si si-netlify"></i> <span>Netlify</span></div>
+                <div class="tool-item"><i class="fas fa-cloud-upload-alt"></i> <span>Vercel</span></div>
+                <div class="tool-item"><i class="fas fa-globe"></i> <span>Netlify</span></div>
                 <div class="tool-item"><i class="fas fa-server"></i> <span>Render</span></div>
             </div>
-            <p class="tools-note">Experienced with continuous deployment integrations directly out of Git repositories into distributed cloud host networks.</p>
         </section>
 
+        <!-- PAGE 9: SERVICES -->
         <section id="services" class="page-view">
             <h2>What I Do</h2>
             <div class="services-grid">
@@ -176,23 +191,22 @@
             </div>
         </section>
 
+        <!-- PAGE 10: CONTACT -->
         <section id="contact" class="page-view">
             <h2>Contact & Channels</h2>
-            <div class="contact-wrapper-inner">
-                <div class="contact-info-block">
-                    <p>Feel free to reach out directly regarding academic collaborations, project tasks, or engineering roles.</p>
-                    <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:muhdmusagala1234@gmail.com">muhdmusagala1234@gmail.com</a>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-phone-alt"></i>
-                        <a href="tel:+2348133083031">+234 813 308 3031</a>
-                    </div>
-                    <div class="contact-method">
-                        <i class="map-marker-alt"></i>
-                        <span>Kano, Nigeria</span>
-                    </div>
+            <div class="contact-info-block">
+                <p>Feel free to reach out directly regarding academic collaborations, project tasks, or engineering roles.</p>
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:muhdmusagala1234@gmail.com">muhdmusagala1234@gmail.com</a>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+2348133083031">+234 813 308 3031</a>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kano, Nigeria</span>
                 </div>
             </div>
         </section>
