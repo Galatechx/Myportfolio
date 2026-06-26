@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Musa Gala | Software Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" onclick="switchPage('home')">MMG<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item active" onclick="switchPage('home')">Home</a></li>
+                <li><a href="#about" class="nav-item" onclick="switchPage('about')">About</a></li>
+                <li><a href="#education" class="nav-item" onclick="switchPage('education')">Education</a></li>
+                <li><a href="#skills" class="nav-item" onclick="switchPage('skills')">Skills</a></li>
+                <li><a href="#projects" class="nav-item" onclick="switchPage('projects')">Projects</a></li>
+                <li><a href="#certifications" class="nav-item" onclick="switchPage('certifications')">Certifications</a></li>
+                <li><a href="#experience" class="nav-item" onclick="switchPage('experience')">Experience</a></li>
+                <li><a href="#tools" class="nav-item" onclick="switchPage('tools')">Tools & Platforms</a></li>
+                <li><a href="#services" class="nav-item" onclick="switchPage('services')">Services</a></li>
+                <li><a href="#contact" class="nav-item" onclick="switchPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="content-wrapper">
+
+        <section id="home" class="page-view active">
+            <div class="hero-content">
+                <h1>Muhammad Musa Gala</h1>
+                <p class="subtitle">Software Engineering Student & Frontend Developer</p>
+                <p class="tagline">Building clean, functional, and production-ready web applications from the ground up.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary" onclick="switchPage('projects')">View My Work</a>
+                    <a href="#contact" class="btn secondary" onclick="switchPage('contact')">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page-view">
+            <div class="about-grid">
+                <div class="about-img-container">
+                    <img src="mmgabout.img" alt="Muhammad Musa Gala" onerror="this.src='https://via.placeholder.com/400x500?text=mmgabout.img+Missing'">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am a 200-level Software Engineering student at Northwest University, Kano (Yusuf Maitama Sule University). My journey into software development is driven by a practical mindset: writing logical, maintainable code to solve real-world problems.</p>
+                    <p>Unlike standard academic paths that rely purely on theory, I actively complement my university education with rigorous independent study. I focus heavily on core web technologies and modern runtime environments, ensuring that everything I build is optimized, responsive, and structurally sound.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="page-view">
+            <h2>Educational Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">Current (Level 200)</span>
+                    <h3>B.Sc. Software Engineering</h3>
+                    <p class="institution">Northwest University, Kano (YUMSUK)</p>
+                    <p>Focused on core computer science fundamentals, data structures, algorithms, and software architecture principles applied to modern systems.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">Completed</span>
+                    <h3>Responsive Web Design Program</h3>
+                    <p class="institution">freeCodeCamp</p>
+                    <p>An intensive 300-hour curriculum covering semantic HTML5, CSS3, responsive layout design, Flexbox, CSS Grid, and web accessibility principles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="page-view">
+            <h2>Technical Proficiencies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Semantic structuring, SEO optimization, and rigorous standard compliance for accessible web architectures.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Modern responsive layouts using Flexbox, CSS Grid, custom properties, and fluid responsive design methodologies.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript (ES6+)</h3>
+                    <p>Vanilla DOM manipulation, asynchronous programming (Promises, Async/Await), Event handling, and functional code delivery.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <p>Understanding of server-side Javascript, environment configurations, and dependency package tracking via NPM.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="page-view">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Developer Portfolio v1.0</h3>
+                        <p class="project-meta">Built with: Vanilla HTML, CSS, JavaScript</p>
+                        <p>My first official professional deployment. A 10-page tabbed architectural portfolio created completely from scratch without external frameworks, featuring modular CSS layouts and customized JavaScript routing mechanisms.</p>
+                        <div class="project-links">
+                            <a href="#" class="proj-link"><i class="fab fa-github"></i> Repository</a>
+                            <a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="certifications" class="page-view">
+            <h2>Professional Certifications</h2>
+            <div class="cert-container">
+                <div class="cert-card">
+                    <h3>Responsive Web Design Certificate</h3>
+                    <p class="issuer">Issued by freeCodeCamp</p>
+                    <div class="cert-image">
+                        <img src="mmgcert.img" alt="freeCodeCamp Responsive Web Design Certificate" onerror="this.src='https://via.placeholder.com/600x400?text=mmgcert.img+Missing'">
+                    </div>
+                    <a href="https://www.freecodecamp.org/certification/muhammad-musa-gala/responsive-web-design" target="_blank" class="btn primary cert-btn">
+                        Verify Official Credential <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="page-view">
+            <h2>Experience</h2>
+            <div class="experience-box">
+                <div class="exp-header">
+                    <h3>Independent Software Developer</h3>
+                    <span class="exp-date">2025 - Present</span>
+                </div>
+                <p class="exp-sub">Open Source & Personal Implementations</p>
+                <ul class="exp-list">
+                    <li>Building cross-browser compatible application skeletons using strict semantic HTML markup.</li>
+                    <li>Structuring responsive style modules ensuring programmatic fluidity on desktop, tablet, and mobile platforms.</li>
+                    <li>Debugging client-side functionality scripts and using Git for atomic feature commits.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="tools" class="page-view">
+            <h2>Ecosystem & Deployment Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-item"><i class="fab fa-github"></i> <span>GitHub</span></div>
+                <div class="tool-item"><i class="si si-vercel"></i> <span>Vercel</span></div>
+                <div class="tool-item"><i class="si si-netlify"></i> <span>Netlify</span></div>
+                <div class="tool-item"><i class="fas fa-server"></i> <span>Render</span></div>
+            </div>
+            <p class="tools-note">Experienced with continuous deployment integrations directly out of Git repositories into distributed cloud host networks.</p>
+        </section>
+
+        <section id="services" class="page-view">
+            <h2>What I Do</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Frontend Layout Design</h3>
+                    <p>Turning layout blueprints into production-ready web interfaces with explicit emphasis on clean, pixel-perfect structural translation.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Responsive Restructuring</h3>
+                    <p>Fixing broken layouts, scaling desktop views cleanly down to mobile targets, and maximizing cross-device usability metrics.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Vanilla JS Logic</h3>
+                    <p>Writing functional, lightweight client-side scripts to run custom interactivity without relying on heavy framework libraries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-view">
+            <h2>Contact & Channels</h2>
+            <div class="contact-wrapper-inner">
+                <div class="contact-info-block">
+                    <p>Feel free to reach out directly regarding academic collaborations, project tasks, or engineering roles.</p>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:muhdmusagala1234@gmail.com">muhdmusagala1234@gmail.com</a>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+2348133083031">+234 813 308 3031</a>
+                    </div>
+                    <div class="contact-method">
+                        <i class="map-marker-alt"></i>
+                        <span>Kano, Nigeria</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Muhammad Musa Gala. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
